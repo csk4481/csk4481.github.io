@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 레이아웃</title> <!--탭의 제목-->
+    <meta name="keywords" content="관련 검색어를 단어로 분리하고, 단어마다 ',' 로 구분하여 입력하며, 자세하게 기술하도록 한다.">
+    <meta name="description" content="해당 사이트의 자세한 설명을 검색어와 함께 입력하여 기술하도록 한다.">
+    <meta name="title" content="기관명이나 사이트명을 입력한다."> <!--검색어 제목-->
+<!--    태그의 속성 : attribute-->
+    <link rel="stylesheet" href="common.css">
+
+    <style>
+        table { display: table; }
+        th,td { display: table-cell; }
+        .contents { clear: both; width: 100%; }
+        .vs { width: 100%; }
+        .vs .pic { display:block; width: 100%; }
+        .page { clear: both; width: 100vw; min-height: 100vh; }
+        .page_tit { text-align: center; line-height: 3.6; }
+        #page { background: orange; }        
+/*        CSS의 속성 : property*/
+    </style>
+</head>
+<body>
+    <div class="wrap">
+<!--           헤더시작-->
+        <header class="hd">
+            <a href="index.html" class="logo">
+<!--            <img src="http://placehold.it/120x50/333" alt="로고">-->
+                <img src="http://loremflickr.com/120/50" alt="로고">
+            </a>
+            <nav id="tnb">
+                <ul class="menu">
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+                    <li><a href="mail.html">Contact us</a></li>
+                </ul>
+            </nav>
+            <nav id="gnb">
+                <ul class="menu">
+                    <li><a href="sub1.html">회사소개</a></li>
+                    <li><a href="sub2.html">제품소개</a></li>
+                    <li><a href="sub3.html">서비스</a></li>
+                    <li><a href="sub4.html">고객센터</a></li>
+                    <li><a href="sub5.html">자료실</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="contents">
+
+            <div class="page" id="page">
+                <form action="" class="login">
+                    <fieldset>
+                        <legend>로그인</legend>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <footer class="ft">
+            <p class="addr">대전광역시 서구 둔산동 1160 오라클빌딩 3F  /  042-480-2811</p>
+            <p class="copyright">Copyright &copy; KKT CO , LTD. All right revered. @ 2019</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
