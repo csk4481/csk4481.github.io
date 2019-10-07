@@ -1,0 +1,19 @@
+@charset "utf-8";
+@font-face{
+    font-family:"nsr";
+    src:local("NanumSquareR"),
+        url("./font/NanumSquareR.eot") format("embedded-opentype"),
+        url("./font/NanumSquareR.woff") format("woff"),
+        url("./font/NanumSquareR.otf") format("opentype");
+    font-weight:400;
+    font-style:normal;
+}
+@font-face{
+    font-family:"nsrr";
+    src:local("NanumSquareRoundR"),
+        url("./font/NanumSquareRoundR.eot") format("embedded-opentype"),
+        url("./font/NanumSquareRoundR.woff") format("woff"),
+        url("./font/NanumSquareRoundR.otf") format("truetype");
+    font-weight:400;
+    font-style:normal;
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2019년 무주 반딧불 축제</title>
+    <meta name="keywords" content="반딧불, 반딧불이, 축제, 무주, 여행, 관광">
+    <meta name="description" content="무주 반딧불이축제사이트입니다.">
+    <meta name="viewport" content="width=device-width initial-scal=1.0 user-scaleable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="무주반딧불축제">
+    <meta property="og:image" content="./data/logo2.gif">
+    <meta property="og:description" content="2019년 제23회 무주 반딧불이 축제로 초대합니다.">
+    
+    <link href="./data/firefly_farvicon1_16x16.ico" type="image/x-icon" rel="shortcut icon">
+	<link rel="icon" type="image/png" sizes="32x32" href="./data/firefly2.png">
+    <link rel="shortcut icon" type="image/*" href="./data/firefly_farvicon2_16x16.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./data/firefly1.png">
+    <link rel="shortcut icon" type="image/*" sizes="180x180" href="./data/firefly_180x180.png">
+    <link rel="stylesheet" href="font.css">
+    
+    <style>
+/*        초기화*/
+        * { margin: 0; padding: 0; }
+/*        폰트 적용*/
+        body, html { width: 100%; height: 100%; font-family: "nsr", sans-serif; }
+
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        button, a, input { border: 0; outline: 0; }
+
+    
+        .hd { width: 100%; height: 150px; background-image: url("./data/hd_bg.jpg"); }
+        .hd_wrap { clear: both; width: 1280px; margin: 0 auto;  position: relative; }
+        
+        .slogo { display: block; width: 110px; height: 57px; background-image: url("./data/slogo.png"); background-repeat: no-repeat; float: left; margin-top: 3px; }
+        .info_box { float: left; margin-left: 50px; line-height: 50px; background-image: url("./data/speaker.png"); background-repeat: no-repeat; background-position: left; padding-left: 40px; }
+        .top { float: right;  }
+        .top li { float: left; }
+        .top li a { display: block; line-height: 50px; padding: 0px 20px; color: #fff; }        
+        
+        .logo { clear: both; display: block; float: left; width: 150px; height: 100px; background-repeat: no-repeat; background-image: url("./data/logo.png"); }
+        
+        
+
+        #mainmenu {float:left;  margin-left:70px; }
+        #mainmenu li {float: left; width: 130px; height: auto; position: relative;   }
+      /*  #mainmenu :hover .sub {display: block;} /*한꺼번에 열리게
+        padding-top: 30px; padding-bottom: 10px; padding-left: 20px;
+        */
+/*      #mainmenu li:hover .sub {display: block;} 각각 열리게*/ 
+
+        
+        
+        #mainmenu li .sub a { text-align: left; }
+        #mainmenu li .sub li {clear: both;}
+        
+        
+        .sub { overflow: hidden; width: 240px; height: 0px; position: absolute; left: 0; top:40px; transition: 0.5s;}  
+        #mainmenu li a {display: block; line-height: 10px; color: #333; font-size:14px; }
+        #mainmenu li a.dp1 {font-size: 16px; text-align: center;}
+        #mainmenu li:hover a.dp1 {color: red; }
+        #mainmenu:hover .sub {height: 240px; overflow: hidden; position: absolute; top: 70px; left:0; z-index: 0; background:#fff; border-bottom: 3px solid transparent; transition: 0.5s; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        #frm1 { float: left; padding-top: 14px; }
+        
+        .search {display: block; float: left; width: 50px; height: 50px; border-radius: 21px; overflow: hidden; text-indent: -9999px; background-color: red; background-image: url("./data/magnifying-glass%20(1).png"); background-repeat: no-repeat; background-position: center center; cursor:pointer;}
+        
+        #sel1 {display: block; float:left;  width: 140px; margin-left: 15px; margin-top: 6px; line-height: 32px; height: 32px; border-radius: 5px 0px 0px 5px; }
+        
+        #go_btn {display: block; float:left;  width: 32px; height: 32px; line-height: 32px; text-align: center; margin-top:6px; border-left: 0px; outline:0; background: #eee; border-radius: 0px 5px 5px 0px;  }
+        
+        #search_form {position: absolute; left: 0; top: 110px; width: 100vw; height: 0px; background:#fff; transition:0.5s; overflow: hidden; border-bottom:3px solid transparent;}
+        
+        #ck1:checked + #search_form { height: 200px; border-bottom: 3px solid #333; }
+        .close_btn {display: block; width: 50px; height: 50px; cursor: pointer; background-image: url("./data/cancel.png");
+            background-position: center center;
+            background-repeat: no-repeat; text-indent: -9999px;
+            position: absolute; right: 20%; top: 0px;
+        }
+        #keyword {display: block; width: 600px; height: 80px; outline: 0; border: 0;
+                background: rgba(0,0,0,0.5); margin-top: 50px; margin-left: 240px; float: left; }
+        .search_btn {display: block; width: 80px; height: 80px; float: left; margin-top: 50px; margin-left: 10px;}
+        
+        
+    </style>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148902053-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-148902053-1');
+</script>
+
+</head>
+<body>
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="" class="slogo"></a>
+            <div class="info_box">무주로 놀러오세요~</div>
+            <ul class="top">
+                <li><a href="">무주소식</a></li>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+            </ul>
+        </div>
+        <div class="hd_wrap">
+            <a href="" class="logo"></a>
+            <nav id="mainmenu">
+                <ul>
+                    <li>
+                        <a href="" class="dp1">축제소개</a>
+                        <ul class="sub">
+                            <li><a href="">반딧불축제란?</a></li>
+                            <li><a href="">행사개요</a></li>
+                            <li><a href="">주차안내</a></li>
+                            <li><a href="">찾아오시는길</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">프로그램 안내</a>
+                        <ul class="sub">
+                            <li><a href="">프로그램일정</a></li>
+                            <li><a href="">대표프로그램</a></li>
+                            <li><a href="">공연프로그램</a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">예약하기</a>
+                        <ul class="sub">
+                            <li><a href="">신비탐사</a></li>
+                            <li><a href="">원정대</a></li>
+                            <li><a href="">생태탐험</a></li>
+                            <li><a href="">뗏목체험</a></li>                            
+                            <li><a href="">반디별소풍</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">현장사진</a></li>
+                            <li><a href="">몽땅자료</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form action="" id="frm1">
+                <label class="search" for="ck1">검색</label>
+                <select name="" id="sel1">
+                    <option value="">English</option>
+                    <option value="">中文</option>
+                    <option value="">日本語</option>
+                    <option value="">한국어</option>
+                </select>
+                <button id="go_btn">GO</button>
+                <input type="checkbox" id="ck1">
+                <div id="scarch_form">
+                    <label for="ck1" class="close_btn">닫기</label>
+                    <input type="text" id="keyword" class="search_txt">
+                    <input type="submit" class="search_btn" value="GO">
+                </div>
+            </form>
+        </div>
+        </header>
+        <main id="content">
+            <figure id="vs">
+                <ul class="img_box">
+                    <li class="item">
+                        <img src="./data/main1.jpg" alt="반딧풀 풍경">
+                    </li>
+                    <li class="item">
+                        <img src="./data/main2.jpg" alt="반디관">
+                    </li>
+                    <li class="item">
+                        <img src="./data/main3.jpg" alt="반디">
+                    </li>
+                    <li class="item">
+                        <img src="./data/main4.jpg" alt="반딧불">
+                    </li>
+                    <li class="item">
+                        <img src="./data/main5.jpg" alt="반디축제,낙화">
+                    </li>
+                    <li class="item">
+                        <img src="./data/main6.jpg" alt="반딧불탐험">
+                    </li>
+                </ul>
+                <ul class="btn_box">
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                </ul>
+            </figure>
+            <div class="vs_box">
+                <div class="tit_box">
+                    <h2 class="vs_tit"></h2>
+                    <p class="vs_com"></p>
+                </div>
+                <ul class="icon_box">
+                    <li class="ico_fr"><a href="">프로그램 다운로드</a></li>
+                    <li class="ico_fr"><a href="">프로그램 찾기</a></li>
+                    <li class="ico_fr"><a href="">프로그램 예약</a></li>
+                </ul>
+                <div class="curve"></div>
+                <ul class="col_box">
+                <li>
+                    <div class="col_fr">
+                        <h3 class="col_tit">프로그램 소개</h3>
+                        <p class="col_com">반디가 노는 세상, 무주로~</p>
+                    </div>
+                    <ul class="lst">
+                        <li>
+                            <a href="">
+                                <img src="./data/explore.png" alt="체험,학습,탐사">
+                                <h4 class="cate_tit">PLAY</h4>
+                                <p class="cate_com">체험,탐사,도전</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./data/stage.png" alt="공연,예술,열정">
+                                <h4 class="cate_tit">SHOW</h4>
+                                <p class="cate_com">공연,예술,열정</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./data/park.png" alt="가족, 힐링, 환경, 소풍">
+                                <h4 class="cate_tit">TOGETHER</h4>
+                                <p class="cate_com">가족, 힐링, 환경</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="col_fr">
+                        <h3 class="col_tit"></h3>
+                        <p class="col_com"></p>
+                    </div>
+                    <ul class="lst">
+                        <li>
+                            <a href="">
+                                <img src="" alt="">
+                                <h4 class="cate_tit"></h4>
+                                <p class="cate_com"></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="" alt="">
+                                <h4 class="cate_tit">PLAY</h4>
+                                <p class="cate_com">체험,탐사,도전</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="col_fr">
+                        <h3 class="col_tit"></h3>
+                        <p class="col_com"></p>
+                    </div>
+                    <ul class="nt">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                    <ul class="thum">
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
+                </li>
+                
+                </ul>
+            </div>
+        </main>
+        <footer id="ft">
+            <div class="ft_wrap">
+                <div class="ft_con">
+                    <img src="./data/tel.png" alt="문의전화">
+                </div>
+                <div class="ft_mid">
+                    <nav id="fnb">
+                        <ul>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">영상정보처리기기 운영 관리방침</a></li>
+                            <li><a href="">사이트맵</a></li>
+                        </ul>
+                    </nav>
+                    <p class="copyright">ⓒ copyright</p>
+                </div>
+                <div class="ft_logo">
+                    <img src="./data/footerlogo.png" alt="">
+                </div>
+                
+            </div>
+        </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

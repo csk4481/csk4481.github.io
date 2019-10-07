@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0 user-scaleable=no">
+    <title>INJE TOUR</title>
+    <meta name="title" content="INJE TOUR">
+    <meta name="keywords" content="INJE TOUR, INJE, 인제, 투어, 인제투어,십이선녀탕,대승폭포, 강원도, 황태, 비밀의 정원">
+    <meta name="description" content="놀거리가 많은 인제로 놀러오세요">
+    <meta property="og:title" content="INJE TOUR">
+    <meta property="og:description" content="놀거리가 많은 인제로 놀러오세요">
+    <meta property="og:image" content="">
+
+   <!--
+    <link href="./data/farvicon_16x16.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="icon" type="image/png" sizes="image/x-icon" href="./data/farvicon_32x32.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./data/ico_kimchang.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./data/ico_kimchang.png">
+    <link rel="shortcut icon" type="image/png" sizes="180x180" href="./data/ico_kimchang.png">
+-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+   
+    <style>
+        * { margin: 0; padding: 0; }
+        body, html { width: 100%; height: 100%; font-family: 'Open Sans', sans-serif;}
+        ul { list-style: none; }
+        a { text-decoration: none; }
+        button, a, input { border: 0; outline: 0; }
+        
+        .wrap { width: 100%; height: 100%; }
+        .page { clear: both; width: 100%; height: 100%; position: relative; }
+        .page_wrap { width: 1280px; margin: 0 auto; }
+        #tnb { width: 100%; height: 42px; background: rgba(0,0,0,0.2); position: absolute; top: 0; left: 0; z-index: 60; }
+        .right.menu { float: right; margin-right: 120px; }
+        
+        #tnb li { float: left; margin-left: 25px; }
+        #tnb li a { display: block; color: #ffffff; font-weight: bold; line-height: 42px; font-size: 14px; }
+        .lst_btn { display: block; width: 64px; height: 64px; background-image:url("./data/menu.png"); background-repeat: no-repeat;
+                    position: fixed; top: 120px; left: 150px; z-index: 100; text-indent: -9999px; cursor: pointer; }
+        #gnb { position: fixed; top: 0; left: -250px; z-index: 99; width: 240px; height: 100%; background-color: rgba(255,255,255,0.8); 
+               transition: 0.5s; border-right: 3px solid #ccc;  }
+        #ck1:checked ~ #gnb { left: 0; }
+        #ck1 { display: none; }
+        .close_btn { display: block; width: 35px; height: 33px; background-image: url("./data/main_sprite_menu.png"); text-indent: -9999px; 
+                     margin: 14px; float: right; background-repeat: no-repeat; cursor: pointer; }
+        .main { clear: both; margin-top: 80px; }
+        .main li { line-height: 46px; }
+        .main li a { display: block; padding-left: 20px; color: #333; font-size: 24px; }
+        .bottom { margin-top: 120px; }
+        .bottom li { line-height: 32px; }
+        .bottom li a { display: block; color: #fe3c08; text-indent: 20px;  }
+        
+        
+        
+        
+        #vd1 { width: 100%; min-height: 100%;  }
+        #vd0 { display: block;  width: 100%; min-height: 100%; }
+        
+        #cover_page { width: 100%; height: 100%; z-index: 10; position: absolute; top: 0%; left: 0; }
+        
+        .tit {  width: 444px; height: 55px;  margin:90px auto; margin-top: 200px;}
+        #frm1 { width: 1000px; height: 80px; margin: 0 auto; background-color:  rgba(0,0,0,0.6);}
+        #keyword { display: block; width: 910px; height: 70px; font-size: 18px;  text-indent: 24px; margin: 5px; float: left; opacity: 0.6; transition: 0.5s; }
+        
+        #search { display: block; width: 33px; height: 33px; float: right; margin: 5px; background-color:#777; background-image: url("./data/search.png"); text-indent: -9999px; 
+            background-size:44px 49px; background-position: center center;  background-repeat: no-repeat; opacity: 0.6; transition: 0.5s; }
+        
+        #keyword:focus { opacity: 1; width: 800px; }
+        #keyword:focus ~ #search { opacity: 1; }
+        #page2, #page3 { background-image: url("./data/main.jpg"); background-repeat: no-repeat; background-size: cover;}
+        #page2 { background-attachment: fixed; padding-top: 40px; }
+        #insight {background-color: #f0f0f0; height: 95%; }
+        .page_tit { text-align: center; line-height: 100px; font-size: 48px;}
+        
+        .thum_lst li { float: left; width: 373px; margin-left: 40px; position: relative; overflow: hidden; height: 320px;  margin-top: 40px; }
+        .thum_lst li.col8 { width: 786px; }
+        .thum_lst li a { color: #333; display: block; width: 360px; height: 300px; transition: 0.6s; transition-delay: 0.1s; background-color: #e1e1e1;}
+        .thum_lst li a:after { content:"▶"; position: absolute; bottom: 27px; right: 24px; display: none;}
+        .thum_lst li a:hover { border: 3px solid #fe3c08; background-color: #fff; }
+        .thum_lst li a:hover::after { display: block; }
+        .cate_tit { padding: 14px; color: #fe3c08; text-decoration: underline; }
+        .lst_tit { padding: 14px; }
+        .lst_com { padding: 14px; }
+        .lst_date { padding: 14px; position: absolute; bottom: 14px; left: 5px;}
+        .thum_lst li.col8 a { width: 770px; color: #fff; background-image: url("./data/p1.jpg"); background-size: cover; }
+        
+        #vs_con { padding-top: 50px; }
+        #vs { width: 100%; overflow-x: hidden; background-color: #fff; padding-top: 50px; position: relative; }
+        .img_box { width: 400%; }
+        .img_box li { float: left; width: 25%; }
+        .img_box li .pic { display: block; width: 580px; float: left; margin-left: 40px; margin-bottom: 40px; }
+        .img_box li .tit_box { width: 580px; float: right; margin-right: 40px; margin-bottom: 40px;  }
+        .vs_tit { padding: 24px; }
+        .vs_com { padding: 24px; }
+        .more { display: block; width: 120px; height: 40px; border: 2px solid #333; color: #333; text-align: center; line-height: 40px; margin: 24px; }
+        .btn_box { position: absolute; right: 100px; bottom: 50px; z-index: 50; width: 500px; height: 14px; }
+        .btn_box li { width: 150px; margin-left: 12px; float: left; }
+        .btn_box li button { display: block; width: 150px; height: 14px; background-color:  #666; }
+        .btn_box li.on button { background-color: #fe3c08;  }
+        
+        .ico_link { clear: both; margin-top: 50px; width: 100%; height: 64px; background: #fff; }
+        .ico_link li { float:left; width: 50%; height: 64px; }
+        .ico_link li a { display: block; color: #333; font-size: 22px; line-height: 64px; text-align: center; background: #fff; padding-left: 100px; }
+        .ico_link li a.item2 { background: #f0f0f0; }
+        
+/*        .ico_link li a:before { content: "A"; padding-left: 15px; padding-right: 15px; background-image: url ("./data/...png"); }
+          .ico_link li a.item1:before { width: 32px; height: 32px; background-repeat: no-repeat; }
+          .ico_link li a.item2:before { width: 32px; height: 32px; background-repeat: no-repeat; }
+        
+        background-image: url ("./data/.png");
+        */
+        
+        
+        .ico_link li a span { display: block; float: left; padding: 15px; }
+        .ico_link li a .ico { background-repeat: no-repeat;  margin-top: 5px;  }
+        .ico_link li a.item1 .ico { background-image: url ("./data/map.png"); width: 32px; height: 32px; }
+        .ico_link li a.item2 .ico { background-image: url ("./data/phone.png"); width: 32px; height: 32px; }        
+
+        
+        #ft { height: 100px; background: #333; color: #fff; }
+        .fnb { float: left; margin-left: 20px; }
+        .fnb li { float: left; padding: 10px; }
+        .fnb li a { color: #fff; display: block; line-height: 78px;  }
+        .fnb li a:after { content:"|"; padding-left: 20px; }
+        .fnb li a.last:after { content: ""; }
+        .copyright { float: right; line-height: 100px; padding-right: 24px; }
+        
+        #totop { position: fixed; right: 60px; bottom: 100px; z-index: 999; display: block; width: 32px; height: 32px; text-align: center;
+                line-height: 60px; background: #f0f0f0; color: #333;
+                border-radius: 32px; box-shadow: 0px 0px 12px #333;  }
+        
+        
+        
+    </style>
+            
+</head>
+<body>
+    <div class="wrap">
+        <nav id="tnb">
+            <ul class="right menu">
+                <li><a href="index.html#page1">HOME</a></li>
+                <li><a href="sub4.html#page2">ABOUT</a></li>
+                <li><a href="sub5.html#page3">SITEMAP</a></li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="ck1">
+        <label for="ck1" class="lst_btn"></label>
+        <nav id="gnb">
+              <label for="ck1" class="close_btn">닫기</label>
+             <ul class="main">
+                <li><a href="sub1.html#page1">볼거리</a></li>
+                <li><a href="sub2.html#page2">먹거리</a></li>
+                <li><a href="sub3.html#page3">즐길거리</a></li>
+                <li><a href="sub4.html#page4">ABOUT</a></li>
+            </ul>
+            <ul class="bottom">
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">SITEMAP</a></li>
+            </ul>
+        </nav>
+        <div class="page" id="page1">
+            <figure id="vdo">
+                <video src="./data/SecretGarden.mp4" autoplay="true" muted loop id="vd1"></video>
+            </figure>
+            <section class="page_wrap" id="cover_page">
+                <h2 class="tit">INJE TOUR</h2>
+                <form action="" id="frm1">
+                     <input type="text" id="keyword" placeholder="검색어를 입력해주세요.">
+                     <input type="submit" id="search" value="검색">
+                 </form>
+            </section>
+        </div>
+        <div class="page" id="page2">
+            <section class="page_wrap" id="insight">
+                <h2 class="page_tit">컨텐츠</h2>
+                <ul class="thum_lst">
+                    <li class="col4">
+                        <a href="">
+                        <h4 class="cate_tit">볼거리1</h4>
+                        <h3 class="lst_tit">비밀의정원</h3>
+                        <p class="lst_com">한줄소개</p>
+                        </a>
+                    </li>
+                    <li class="col4">
+                       <a href="">
+                            <h4 class="cate_tit">볼거리2</h4>
+                            <h3 class="lst_tit">대승폭포</h3>
+                            <p class="lst_com">한줄소개</p>
+                        </a>
+                    </li>
+                    <li class="col4">
+                        <a href="">
+                            <h4 class="cate_tit">볼거리3</h4>
+                            <h3 class="lst_tit">십이선녀탕</h3>
+                            <p class="lst_com">한줄소개</p>
+                        </a>
+                    </li>
+                    <li class="col4">
+                        <a href="">
+                            <h4 class="cate_tit">먹거리</h4>
+                            <h3 class="lst_tit">맛있는녀석들</h3>
+                            <p class="lst_com">한줄소개</p>
+                        </a>
+                    </li>
+                    <li class="col8">
+                        <a href="">
+                            <h4 class="cate_tit">축제</h4>
+                            <h3 class="lst_tit">내설악산축제내설악산축제</h3>
+                            <p class="lst_com">주요 기사 목록: 
+                            기업지배구조보고서 의무 공시제도 시행과 향후 전망 
+                            기술탈취 관련 최근 공정위 조사 동향 
+                            .</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="page" id="page3">
+            <section class="page_wrap" id="vs_con">
+                <figure id="vs">
+                    <ul class="img_box">
+                        <li>
+                            <img src="./data/p1.jpg" alt="배너1" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">아시아·태평양 지역 최우수 로펌 선정 - Asialaw Regional Awards 2019</h3>
+                                <p class="vs_com">김·장 법률사무소가 제2회 Asialaw Regional Awards에서 다시 한 번 ‘Asia-Pacific Firm of the Year (올해의 아시아 로펌 상)’ 을 수상하는 영예를 안았습니다.</p>
+                                <a href="" class="more">VIEW MORE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./data/p1.jpg" alt="배너2" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">국내 유일 8개 전 분야 ‘Band 1’ 선정 - Chambers Global 2019</h3>
+                                <p class="vs_com">김·장 법률사무소가 Chambers Global 2019년판에서 올해도 국내 로펌 중 유일하게 8개의 한국 대상 리서치 전 분야에서 'Band 1(선두 로펌)'으로 선정되었습니다.</p>
+                                <a href="" class="more">VIEW MORE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./data/p1.jpg" alt="배너3" class="pic">
+                            <div class="tit_box">
+                                <h3 class="vs_tit">글로벌 역량: 풍부한 업무 경험과 네트워크</h3>
+                                <p class="vs_com">한국과 아시아를 넘어 기업의 글로벌 법률파트너로 자리매김한 김·장 법률사무소의 축적된 업무 경험과 네트워크를 “글로벌 역량” 페이지에서 소개합니다.</p>
+                                <a href="" class="more">VIEW MORE</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="btn_box">
+                        <li class="on"><button></button></li>
+                        <li><button></button></li>
+                        <li><button></button></li>
+                    </ul>
+                </figure>
+                <ul class="ico_link">
+                    <li>
+                        <a href="" class="item1">
+                            <span class="ico"></span>
+                            <span>인제군청 위치</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="item2">
+                            <span class="ico"></span>
+                            <span>인제군청 연락처</span>
+                        </a>
+                    </li>
+                </ul>
+                <footer id="ft">
+                    <ul class="fnb">
+                        <li><a href="">인제군청 위치</a></li>
+                        <li><a href="">연락처</a></li>
+                        <li><a href="">면책공고</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="" class="last">앱접근성</a></li>
+                    </ul>
+                    <p class="copyright">copyright</p>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <a href="#" id="totop">↑</a>    
+</body>
+</html>
