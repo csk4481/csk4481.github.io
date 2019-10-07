@@ -7,13 +7,58 @@
     <meta name="description" content="빈곤 질병 노령 등 사회적 위험으로부터 국민을 보호하고, 일자리와 균등한 사회참여 기회를 제공하며, 평생복지를 위한 생애 주기별 맞춤형 보건 복지 정책으로 국민 삶의 질을 향상시키기 위해 노력합니다.">
     <meta name="viewport" content="width=device-width initial-scal=1.0 user-scaleable=no">
     <link rel="./data/shortcut_icon_16x16.ico" type="image/x-icon" rel="shortcut icon">
-        <link rel="icon" type="image/png" sizes="32x32" href="./data/shortcut_icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./data/shortcut_icon.png">
     <link rel="shortcut icon" type="image/*" href="./data/_16x16.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./data/shortcut_icon.png">
     <link rel="shortcut icon" type="image/png" sizes="180x180" href="./data/shortcut_icon.png">
-    
-    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+    <style>
+        /*        초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*        폰트 적용*/
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        a,
+        input {
+            border: 0;
+            outline: 0;
+        }
+
+
+        .search {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 50px;
+            overflow: hidden;
+            background-image: url("./data/alogo.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+
 </head>
+
 <body>
     <header class="hd">
         <div class="hd_wrap">
@@ -86,11 +131,49 @@
                     </li>
                 </ul>
             </nav>
-            <form action="" id="frm1">
-                <input type="text" id="keyword">
-                <input type="" id="search">
-            </form>
         </div>
-    </header>
+        </header>
+        <div class="page" id="page1">
+            <figure id="img"><img src="" alt="" id="img1"></figure>
+            <section class="page_wrap">
+                <h2 class="tit"></h2>
+                <form action="" id="frm1"><input type="text"><input type="submit"></form>
+            </section>
+        </div>
+        <div class="page" id="page2">
+            <figure id="vs">
+               <h2>한 눈으로 보는 복지 정보</h2>
+                <ul class="img_box">
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                    <li class="item"></li>
+                </ul>
+                <ul class="btn_box">
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                </ul>
+            </figure>
+            <figure id="ws">
+                <h2>찾아 보기</h2>
+                <ul class="img_box">
+                    <li class="item4"></li>
+                </ul>
+                <ul class="btn_box">
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                    <li class="btn"><button></button></li>
+                </ul>
+            </figure>
+            
+        </div>
+    
 </body>
 </html>
