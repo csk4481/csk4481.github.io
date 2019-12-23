@@ -1,0 +1,37 @@
+@charset "utf8";
+* { margin: 0; padding: 0; }
+body, html { width: 100%; height: 100%;  }
+ul { list-style:none; }
+a { text-decoration: none; }
+.n_item { display:none; }
+.hd { width: 100%; height: 60px; 
+	overflow:hidden; border-bottom:1px solid #ccc; position:fixed; top:0; left:0;
+	z-index:90; background-color:rgba(255,255,255,0.9); }
+.hd label { font-size:30px; display:block; 
+	position:absolute; top:0px; width:58px; height:58px; line-height:58px; 
+	border:1px solid #333;
+	text-align:center; }
+.lst_call { left: 0; }	
+.top_call { right:0; }
+.logo { display:block; text-align:center; line-height: 60px; padding-top: 10px; }
+#gnb { position:fixed; left:-110%; top:60px; 
+	min-height:100%; background-color:rgba(0,0,0,0.8); z-index:100; width:100%; transition:0.6s; }
+#top { position:fixed; right:-110%; top:60px; 
+	min-height:100%; background-color:rgba(0,0,0,0.8); z-index:100; width:100%; transition:0.6s; }
+.menu li { line-height:60px; border-top:1px solid #666; border-bottom:1px solid #000; }
+.menu li a { display:block; line-height: 60px; text-indent:2rem; font-size:16px; color:#fff; }
+.hd i { margin-top:12px; }
+#ck1:checked ~ #gnb { left: 0;  }
+#ck1:not(:checked) ~ .hd .lst_call .xi-bars { display:block; }
+#ck1:not(:checked) ~ .hd .lst_call .xi-close { display:none; }
+#ck1:checked ~ .hd .lst_call .xi-bars { display:none; }
+#ck1:checked ~ .hd .lst_call .xi-close { display:block; }
+#ck2:checked ~ #top { right: 0;  }
+#ck2:not(:checked) ~ .hd .top_call .xi-eye { display:block; }
+#ck2:not(:checked) ~ .hd .top_call .xi-close { display:none; }
+#ck2:checked ~ .hd .top_call .xi-eye { display:none; }
+#ck2:checked ~ .hd .top_call .xi-close { display:block; }
+.ft { clear:both; width:100%; height: 80px; padding:2rem 0px; 
+	background-color:#333;}
+.copyright { color:#fff; padding: 3rem; }
+.blank { clear:both; width: 100%; height:60px; }
