@@ -56,7 +56,7 @@ _기울임꼴2_
 
 ![구글로고](http://www.google.com/images/srpr/logo11w.png)
 
-## 가르선 넣기
+## 가로선 넣기
 
 ---
 
