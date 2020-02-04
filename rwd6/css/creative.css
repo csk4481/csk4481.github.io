@@ -9599,7 +9599,7 @@ hr.light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: rgba(255,255,255,1);
   transition: background-color 0.2s ease;
 }
 
@@ -9739,5 +9739,9 @@ header.masthead h1 {
 
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+.logo {
+  width:200px;
 }
 
