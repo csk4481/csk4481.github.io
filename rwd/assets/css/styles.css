@@ -1,0 +1,66 @@
+.navbar.navbar-dark.navbar-expand-md.fixed-top.bg-dark.justify-content-between {
+  background-color: #000 !important;
+  opacity: 0.8;
+}
+
+.navbar-dark .navbar-nav .nav-link .apple-logo {
+  font-size: 21px;
+  line-height: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link .apple-logo, .apple-search, .apple-shop {
+  font-size: 21px;
+  line-height: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 16px;
+}
+
+body {
+  padding: 58px;
+}
+
+.product {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.product h5 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+.product h2 {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.product h1 {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.product .links {
+  font-size: 21px;
+  margin-top: 80px;
+}
+
+.learn-more {
+  margin-right: 20px;
+}
+
+.product.iphone11, .macbookPro, .ipad {
+  background-color: #fff;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
